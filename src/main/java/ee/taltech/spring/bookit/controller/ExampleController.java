@@ -18,6 +18,7 @@ public class ExampleController {
     @Resource
     UserService service;
 
+
     @GetMapping(value = "/{id}")
     public String hello(Model model, @PathVariable Long id) {
         User user = service.getUserById(id);
@@ -27,7 +28,7 @@ public class ExampleController {
 
     @GetMapping(value = "api/{id}")
     @ResponseBody
-    public User joukijou(@PathVariable Long id) {
+    public User hiThere(@PathVariable Long id) {
         return service.getUserById(id);
     }
 }
